@@ -47,4 +47,4 @@ Code execution
   eg: $PETSC_DIR/$PETSC_ARCH/bin/mpirun -n 1 ./SPAxb "path to grid file <grid.out>"
                                                       ----------------------------
 
-NOTE: This code gives a rough idea of how matrix systems are formed for unstructured cell-based finite volume formulation. The code handles any type of mesh cell ordering and is not restricted to the one used for the project provided the cell-cell connectivity follows the same format as provided in the grid file "grid.out".
+NOTE: The code gives a rough idea of how matrix systems are formed for unstructured cell-based finite volume formulation. The code handles any type of mesh cell ordering and is not restricted to the one used for the project provided the cell-cell connectivity follows the same format as given in the grid file "grid.out".
