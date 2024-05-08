@@ -1,6 +1,6 @@
 # SPAxb
 This project shows how to develop and solve sparse Ax=b system. PETSc is utilised for the iterative solution.
-Each row of matrix A has non-zero entires of the form (1,1,4,1,1) that is typical of a matrix obtained from descritized Laplacian operator on an orthogonal two dimensional mesh using conventional numerical techniques such as finite difference or finite volume method. For structured (IJK ordering) mesh, the discretization yields a banded matrix. For this project, the mesh cells are anti-clockwise ordered as given below.
+Each row of matrix A has non-zero entires of the form (1,1,4,1,1) that is typical of a matrix obtained from descritized Laplacian operator on an orthogonal two dimensional mesh using conventional numerical techniques such as finite difference or finite volume method. For structured (IJK ordering) mesh, the discretization yields a banded matrix. For this project, the mesh cells are counter-clockwise ordered as given below.
 
   _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
  |           |           |           |           |     
@@ -21,7 +21,7 @@ Each row of matrix A has non-zero entires of the form (1,1,4,1,1) that is typica
  |_ _ _ _ _ _|_ _ _ _ _ _|_ _ _ _ _ _| _ _ _ _ _ | 
 
  
-The resulting matrix size is 16x16. The above cell ordering results in a sparse matrix with increasing bandwidth with cell number. Each cell corresponds to a matrix entry typical to that of finite volume discretization.
+The resulting matrix size is 16x16. The above cell ordering results in a sparse matrix with increasing bandwidth with cell number. Each cell corresponds to a matrix entry typical to that of cell-based finite volume/finite difference discretization.
 
 A grid file is provided "grid.out" that shows the cell-cell connectivity. For interior cells (2,5,6,7) there are 4 neighbours, hence the number of non-zero entries are 5 including the parent cell number. For boundary cells (0,1,3,4,8,9,10,11,12,13,14,15) the number of neighbouring cells are less than 4, hence the non-zero entries in the corresponding rows are less than 5. In the grid file "grid.out", the corresponding entries of the boundary cells where neighbours are absent are labelled '-1'.
 
@@ -39,3 +39,7 @@ Matrix system Ax=b solution:
 - b-vector is calculated by multiplying matrix A with a dummy vector dump_x of ones.
 - After Ax=b solve, the resulting x-vector should be returned as ones of dimensions 'nx1'.
 
+Code execution
+------------------------------
+- The code utiizes PETSc and hence the execution follows PETSc procedure. For installation of PETSc following link may be used:
+- 
