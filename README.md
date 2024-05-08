@@ -35,4 +35,7 @@ ROW_ptr         (n+1)
 
 Matrix system Ax=b solution:
 ------------------------------
+- PETSc is used for the iterative solution of Ax=b with GMRES as iterative solver and GAMG as preconditioner.
+- b-vector is calculated by multiplying matrix A with a dummy vector dump_x of ones.
+- After Ax=b solve, the resulting x-vector should be returned as ones of dimensions 'nx1'.
 
