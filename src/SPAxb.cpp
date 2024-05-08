@@ -179,7 +179,7 @@ int main(int argc, char **argv)
 {
 
 	f_argc = argc;
-    f_argv = argv;
+    	f_argv = argv;
 
 	meshread();
 	resize_vect();
