@@ -1,0 +1,14 @@
+Compile command using CMake and PETSc
+------------------------------------------------------------------
+
+cmake \
+-DCMAKE_C_COMPILER=${PETSC_DIR}/${PETSC_ARCH}/bin/mpicc \
+-DCMAKE_CXX_COMPILER=${PETSC_DIR}/${PETSC_ARCH}/bin/mpicxx \
+-DPETSCINC=${PETSC_DIR}/include \
+-DPETSCLIB=${PETSC_DIR}/${PETSC_ARCH}/lib/libpetsc.so \
+../src
+
+make
+
+Run:
+$PETSC_DIR/$PETSC_ARCH/bin/mpirun -n 1 ./SPAxb "<Path to grid.out>" -ksp_monitor
