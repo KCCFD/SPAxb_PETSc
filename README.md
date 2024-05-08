@@ -22,3 +22,5 @@ Each row of matrix A has non-zero entires of the form (1,1,4,1,1) that is typica
 
  
 The resulting matrix size is 16x16. The above cell ordering results in a sparse matrix with increasing bandwidth with cell number. Each cell corresponds to a matrix entry typical to that of finite volume discretization.
+
+A grid file is provided "grid.out" that shows the cell-cells connectivity. For interior cells (2,5,6,7) there are 4 neighbours, hence the number of non-zero entries are 5 including the parent cell number. For boundary cells (0,1,3,4,8,9,10,11,12,13,14,15) the number of neighbouring cells are less than 4, hence the non-zero entries in the corresponding rows are less than 5. 
