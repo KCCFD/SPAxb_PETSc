@@ -43,8 +43,9 @@ Code execution
 ------------------------------
 - The code utilizes PETSc and hence the execution follows PETSc procedure. CMake is used for compilation. For linking PETSc using CMake, the procedure given in the following link may be used:
   https://github.com/KCCFD/Linking-PETSc-using-CMake-MPI-HelloWorld
-- The file path to grid file should be given as the second (2nd) command line argument. The grid file "grid.dat" is stored in "/include/" folder.
-  eg: $PETSC_DIR/$PETSC_ARCH/bin/mpirun -n 1 ./SPAxb "path to grid file <grid.dat>"
+- The file path to grid file should be given as the second (2nd) command line argument. The grid file "grid.dat" is stored in "/include/" folder.  eg:
+  
+  $PETSC_DIR/$PETSC_ARCH/bin/mpirun -n 1 ./SPAxb "path to grid file <grid.dat>"
                                                       ----------------------------
 
 NOTE: The code gives a rough idea of how matrix systems are formed for unstructured cell-based finite volume formulation. The code handles any type of mesh cell ordering and is not restricted to the one used for the project provided the cell-cell connectivity follows the same format as given in the grid file "grid.dat".
