@@ -51,7 +51,6 @@ void meshread()
 
 
 	int a,b,c,d,e;
-	string str;
 	int count = 0;
 	
 	while(fin>>a>>b>>c>>d>>e)
