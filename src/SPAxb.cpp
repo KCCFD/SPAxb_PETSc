@@ -309,7 +309,8 @@ KSPSolve(ksp, Pet_b, Pet_x);
 VecView(Pet_x, PETSC_VIEWER_STDOUT_SELF);
 
 
-
+KSPDestroy(&ksp); // Important else cause memory outflow 
+	
 // MatVecDestroy //
 
 VecDestroy(&Pet_b);
